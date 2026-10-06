@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --primary: #6c63ff;
+        --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: sans-serif;
+        background: #f5f5f5;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 32px;
+        background: #1a1a2e;
+        color: white;
+      }
+
+      .header nav a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        margin-left: 20px;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 30px;
+      }
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: var(--card-shadow);
+        transition: box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div>アプリ</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">daily</a></li>
+          <li><a href="#">Lank</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="card-grid">
+      <div class="card">
+        <h3>チュートリアル1</h3>
+        <p>剣術</p>
+      </div>
+      <div class="card">
+        <h3>チュートリアル2</h3>
+        <p>魔法</p>
+      </div>
+      <div class="card">
+        <h3>探索</h3>
+        <p>基礎訓練</p>
+      </div>
+    </main>
+  </body>
+</html>
