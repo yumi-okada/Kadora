@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS変数テスト</title>
+
+    <style>
+      /* CSS変数を定義 */
+      :root {
+        --main-color: #e91e63;
+        --bg-dark: #222222;
+      }
+
+      /* bodyにdarkクラスがある場合、変数を上書き */
+      body.dark {
+        --main-color: #8bc34a;
+      }
+
+      /* CSS変数を使ってボタンの色を設定 */
+      .btn {
+        background-color: var(--main-color);
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <button class="btn">ボタン</button>
+  </body>
+</html>
